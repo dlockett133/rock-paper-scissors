@@ -8,7 +8,7 @@ let computerPlay = () => {
 
 }
 
-let computerSelection = computerPlay();
+// let computerSelection = computerPlay();
 
 let gameOver = false;
 
@@ -23,6 +23,9 @@ while(gameOver == false){
         }
     }
     while (cpuResult.includes(playerSelection) == false );
+
+    let computerSelection = computerPlay();
+
 
     console.log(`You chose ${playerSelection}!`);
     console.log(`The CPU chose ${computerSelection}!`);
