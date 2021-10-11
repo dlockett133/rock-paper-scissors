@@ -1,1 +1,5 @@
-console.log("Hello");
+const cpuResult = ["Rock", "Paper", "Scissors"];
+
+let computerPlay = () => {
+
+}
