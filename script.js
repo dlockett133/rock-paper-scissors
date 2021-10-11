@@ -8,8 +8,6 @@ let computerPlay = () => {
 
 }
 
-// let computerSelection = computerPlay();
-
 let gameOver = false;
 
 while(gameOver == false){
