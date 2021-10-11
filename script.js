@@ -1,5 +1,5 @@
 const cpuResult = ["ROCK", "PAPER", "SCISSORS"];
-let userPlay;
+let playerSelection;
 
 let computerPlay = () => {
     i = cpuResult.length;
@@ -8,38 +8,38 @@ let computerPlay = () => {
 
 }
 
-let cpuHand = computerPlay();
+let computerSelection = computerPlay();
 
 let gameOver = false;
 
 while(gameOver == false){
     do {
 
-        userPlay = prompt("Rock, Paper Scissors: ").toUpperCase();
-        if (cpuResult.includes(userPlay) == false ){
+        playerSelection = prompt("Rock, Paper Scissors: ").toUpperCase();
+        if (cpuResult.includes(playerSelection) == false || playerSelection == null){
     
             console.log("Please Choose Rock, Paper or Scissors!!")
             
         }
     }
-    while (cpuResult.includes(userPlay) == false );
+    while (cpuResult.includes(playerSelection) == false );
 
-    console.log(`You chose ${userPlay}!`);
-    console.log(`The CPU chose ${cpuHand}!`);
+    console.log(`You chose ${playerSelection}!`);
+    console.log(`The CPU chose ${computerSelection}!`);
 
-    if (userPlay === cpuHand){
+    if (playerSelection === computerSelection){
 
         console.log("Draw! Try Again!");
 
-    } else if ((userPlay === "ROCK" && cpuHand === "SCISSORS") || 
-        (userPlay === "PAPER" && cpuHand === "ROCK") ||
-        (userPlay === "SCISSORS" && cpuHand === "PAPER")){
+    } else if ((playerSelection === "ROCK" && computerSelection === "SCISSORS") || 
+        (playerSelection === "PAPER" && computerSelection === "ROCK") ||
+        (playerSelection === "SCISSORS" && computerSelection === "PAPER")){
 
-        console.log("You Win!!!");
+        console.log(`${playerSelection} beats ${computerSelection}! You Win!!!`);
         gameOver = true;
 
     } else {
 
-        console.log("You Lose! Try Again!");
+        console.log(`${playerSelection} loses to ${computerSelection}! Try Again!`);
     }
 }
